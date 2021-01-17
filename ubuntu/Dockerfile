@@ -10,6 +10,7 @@ ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ADD djyurika /etc/init.d/djyurika
 ADD restarter /etc/init.d/restarter
+ADD ddj400 /etc/init.d/ddj400
 ADD dj /home/djyurika/dj
 ADD init.sh /home/djyurika/init.sh
 ADD restarter.js /home/djyurika/restarter.js

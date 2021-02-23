@@ -9,6 +9,7 @@ RUN echo 'djyurika:your_password' | chpasswd
 ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ADD djyurika /etc/init.d/djyurika
+ADD djyurika2 /etc/init.d/djyurika2
 ADD restarter /etc/init.d/restarter
 ADD ddj400 /etc/init.d/ddj400
 ADD dj /home/djyurika/dj

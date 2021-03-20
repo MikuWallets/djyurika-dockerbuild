@@ -21,7 +21,7 @@ LANG="ko_KR.UTF-8"
 
 start() {
 	printf "Starting '$NAME'... "
-	start-stop-daemon --start --background --make-pidfile --pidfile /var/run/$NAME.pid --chdir "$APPDIR/build" --startas /bin/bash -- -c "exec $APPBIN djyurika.js > /home/djyurika/logs/V2_$(date +%Y-%m-%dT%H_%M_%S).log 2>&1" || true
+	start-stop-daemon --start --background --make-pidfile --pidfile /var/run/$NAME.pid --chdir "$APPDIR/build" --startas /bin/bash -- -c "exec $APPBIN app.js > /home/djyurika/logs/V2_$(date +%Y-%m-%dT%H_%M_%S).log 2>&1" || true
 	printf "done\n"
 }
 
